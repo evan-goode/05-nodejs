@@ -34,7 +34,6 @@ node server.js
     "@babel/core": "^7.3.3",
     "@babel/node": "^7.2.2",
     "@babel/preset-env": "^7.3.1",
-    "body-parser": "^1.18.3",
     "ejs": "^2.6.1",
     "express": "^4.16.4"
   },
@@ -57,7 +56,6 @@ npm i
 ```
 import express from 'express';
 import path from 'path';
-import bodyParser from 'body-parser';
 
 const app = express();
 ```
@@ -110,7 +108,7 @@ In the blank space of index.ejs
 
 ## 09: Handle Editing
 ```
-app.use(bodyParser.urlencoded({ extended: true }))
+app.use(express.urlencoded({ extended: true }))
 
 ...
 
@@ -134,7 +132,7 @@ app.post('/', (req, res) => {
 
 ## 10: Read API
 ```
-app.use(bodyParser.json())
+app.use(express.json())
 
 ...
 
